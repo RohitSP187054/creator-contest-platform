@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creator Contest Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#111D5E', // Deep navy
+              accent: '#FF7A00', // Orange for buttons & links
+              light: '#F1F5FB',   // Background
+              'light-hover': '#E5EFFB',
+              'dark-text': '#333333',
+            },
+            fontFamily: {
+              sans: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            },
+            borderRadius: {
+              'lg': '8px',
+            },
+            keyframes: {
+              'toast-in': {
+                '0%': { transform: 'translateY(-100%)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              'toast-out': {
+                '0%': { transform: 'translateY(0)', opacity: '1' },
+                '100%': { transform: 'translateY(-100%)', opacity: '0' },
+              }
+            },
+            animation: {
+              'toast-in': 'toast-in 0.5s ease-out forwards',
+              'toast-out': 'toast-out 0.5s ease-in forwards',
+            }
+          }
+        }
+      }
+    </script>
+  
+  </head>
+  <body class="bg-light font-sans text-dark-text">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
